@@ -5,18 +5,13 @@ int main(void)
 {
 	void written_amount(long long int amount);
 	long long int a;
+    char chch[100];
     printf("你的数字:");
     
-    while(1){
-        scanf("%lld",&a);
-        if(a <= 999999999999)
-            break;
-        else{
-            printf("数据太大！\n");
-            printf("你的数字:");
-        }
-
-
+    while(!scanf("%lld",&a)||a>999999999999){
+        fgets(chch,99,stdin);
+        printf("%s",chch);
+        printf("你的数字:");
     }
 
     if(a>0)
